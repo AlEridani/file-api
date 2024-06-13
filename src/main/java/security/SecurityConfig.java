@@ -23,9 +23,6 @@ public class SecurityConfig {
     private final UserDetailsService userDetailsService;
     private  JwtRequestFilter jwtRequestFilter;
 
-
-
-
     @Bean
     public UserDetailsService userDetailsService() {
         return userDetailsService;
