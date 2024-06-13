@@ -1,5 +1,6 @@
 package security;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,23 +18,18 @@ import service.CustomUserDetailsService;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
     private final UserDetailsService userDetailsService;
-    private final JwtRequestFilter jwtRequestFilter;
+    private  JwtRequestFilter jwtRequestFilter;
 
-    public SecurityConfig(UserDetailsService userDetailsService, JwtRequestFilter jwtRequestFilter) {
-        this.userDetailsService = userDetailsService;
-        this.jwtRequestFilter = jwtRequestFilter;
-    }
+
 
 
     @Bean
     public UserDetailsService userDetailsService() {
         return userDetailsService;
     }
-
-    @Bean
-    public
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -47,7 +43,8 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/authenticate", "/register"))
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/authenticate", "/register").permitAll()
                         .anyRequest().authenticated()
