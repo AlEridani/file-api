@@ -1,5 +1,7 @@
 package controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +11,10 @@ import service.FileService;
 
 import java.util.List;
 
-@RequestMapping("/files")
+@RequestMapping("files")
 @RestController
 public class FileController {
+    private final Logger logger = LoggerFactory.getLogger(FileController.class);
     private final FileService fileService;
     public FileController(FileService fileService) {
         this.fileService = fileService;
@@ -27,6 +30,7 @@ public class FileController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<String>> getFiles() {
+        logger.info("getFiles호출");
         List<String> fileList = fileService.listFiles();
         return ResponseEntity.ok(fileList);
     }

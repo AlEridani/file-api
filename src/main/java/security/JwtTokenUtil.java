@@ -51,5 +51,4 @@ public class JwtTokenUtil {
         final String extractedUsername = extractUsername(token);
         return (extractedUsername.equals(username) && !isTokenExpired(token));
     }
-    //잔디테스트22221
 }
