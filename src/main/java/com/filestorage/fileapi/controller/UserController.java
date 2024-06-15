@@ -1,7 +1,7 @@
-package controller;
+package com.filestorage.fileapi.controller;
 
-import model.AuthenticationRequest;
-import model.User;
+import com.filestorage.fileapi.model.AuthenticationRequest;
+import com.filestorage.fileapi.model.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -9,9 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import repository.UserRepository;
-import security.JwtTokenUtil;
-import service.FileService;
+import com.filestorage.fileapi.repository.UserRepository;
+import com.filestorage.fileapi.security.JwtTokenUtil;
 
 @RestController
 @RequestMapping("User")

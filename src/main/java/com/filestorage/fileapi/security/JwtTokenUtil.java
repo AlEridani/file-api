@@ -1,4 +1,4 @@
-package security;
+package com.filestorage.fileapi.security;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;

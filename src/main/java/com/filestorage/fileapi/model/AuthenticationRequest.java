@@ -1,4 +1,4 @@
-package model;
+package com.filestorage.fileapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

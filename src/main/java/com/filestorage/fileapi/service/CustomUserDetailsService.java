@@ -1,11 +1,11 @@
-package service;
+package com.filestorage.fileapi.service;
 
-import model.User;
+import com.filestorage.fileapi.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import com.filestorage.fileapi.repository.UserRepository;
 
 import java.util.ArrayList;
 @Service

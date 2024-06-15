@@ -1,4 +1,4 @@
-package service;
+package com.filestorage.fileapi.service;
 
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;

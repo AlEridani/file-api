@@ -1,6 +1,6 @@
-package repository;
+package com.filestorage.fileapi.repository;
 
-import model.User;
+import com.filestorage.fileapi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

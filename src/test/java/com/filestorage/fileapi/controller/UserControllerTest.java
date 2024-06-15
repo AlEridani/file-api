@@ -1,8 +1,8 @@
 package com.filestorage.fileapi.controller;
 
 
-import model.AuthenticationRequest;
-import model.User;
+import com.filestorage.fileapi.model.AuthenticationRequest;
+import com.filestorage.fileapi.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import repository.UserRepository;
+import com.filestorage.fileapi.repository.UserRepository;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;

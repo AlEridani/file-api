@@ -1,4 +1,4 @@
-package controller;
+package com.filestorage.fileapi.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import service.FileService;
+import com.filestorage.fileapi.service.FileService;
 
 import java.util.List;
 
